@@ -16,6 +16,7 @@
 		0821A21021A29163003BAA70 /* RandomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821A20F21A29163003BAA70 /* RandomCollectionViewCell.swift */; };
 		0821A21221A3D930003BAA70 /* UIColorExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821A21121A3D930003BAA70 /* UIColorExtension .swift */; };
 		0821A21421A3DA25003BAA70 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821A21321A3DA25003BAA70 /* ButtonCollectionViewCell.swift */; };
+		0821A21621A40F46003BAA70 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821A21521A40F46003BAA70 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0821A20F21A29163003BAA70 /* RandomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCollectionViewCell.swift; sourceTree = "<group>"; };
 		0821A21121A3D930003BAA70 /* UIColorExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColorExtension .swift"; sourceTree = "<group>"; };
 		0821A21321A3DA25003BAA70 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		0821A21521A40F46003BAA70 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				0821A20F21A29163003BAA70 /* RandomCollectionViewCell.swift */,
 				0821A21321A3DA25003BAA70 /* ButtonCollectionViewCell.swift */,
 				0821A21121A3D930003BAA70 /* UIColorExtension .swift */,
+				0821A21521A40F46003BAA70 /* UIViewExtension.swift */,
 				0821A1FF21A2639F003BAA70 /* Main.storyboard */,
 				0821A20221A263A1003BAA70 /* Assets.xcassets */,
 				0821A20421A263A1003BAA70 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				0821A21221A3D930003BAA70 /* UIColorExtension .swift in Sources */,
 				0821A21021A29163003BAA70 /* RandomCollectionViewCell.swift in Sources */,
 				0821A1FE21A2639F003BAA70 /* ViewController.swift in Sources */,
+				0821A21621A40F46003BAA70 /* UIViewExtension.swift in Sources */,
 				0821A21421A3DA25003BAA70 /* ButtonCollectionViewCell.swift in Sources */,
 				0821A1FC21A2639F003BAA70 /* AppDelegate.swift in Sources */,
 			);
