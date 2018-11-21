@@ -22,24 +22,20 @@ class ButtonCollectionViewCell: UICollectionViewCell {
             self.setBaseLineShowMode(mode: cellData.baseLineShowMode)
         }
     }
-    
-    private func setButtonBackGroundColor(isHighlight:Bool){
-        self.button.backgroundColor = isHighlight ? UIColor.clear : UIColor.customBaseLineColor()
-        self.button.titleLabel?.textColor = isHighlight ? UIColor.customButtomCellTextColor() : UIColor.white
-    }
+
     
     private func setBackGroundColor(mode:BackGroundColorMode){
         switch mode {
         case .black:
             self.button.backgroundColor =  UIColor.clear
-            self.button.titleLabel?.textColor = UIColor.customButtomCellTextColor()
+            self.button.setTitleColor(UIColor.customButtomCellTextColor(), for: .normal)
         case .highlightBlue:
             self.button.backgroundColor =  UIColor.customBaseLineColor()
-            self.button.titleLabel?.textColor = UIColor.white
+            self.button.setTitleColor(UIColor.white, for: .normal)
         default :
             assert(false)
             self.button.backgroundColor = UIColor.clear
-            self.button.titleLabel?.textColor = UIColor.clear
+            self.button.setTitleColor(UIColor.clear, for: .normal)
         }
     }
     

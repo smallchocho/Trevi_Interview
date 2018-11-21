@@ -257,7 +257,7 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iB-mU-YB7">
-                                                    <rect key="frame" x="10" y="10" width="125" height="127"/>
+                                                    <rect key="frame" x="10" y="16" width="125" height="121"/>
                                                     <state key="normal" title="確定">
                                                         <color key="titleColor" red="0.62345987560000005" green="0.62356954809999998" blue="0.62345290180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -288,7 +288,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Okc-TW-e68" secondAttribute="bottom" id="Txq-Db-2nz"/>
                                             <constraint firstAttribute="trailing" secondItem="TTD-p4-2vB" secondAttribute="trailing" id="Vkp-yT-Ihs"/>
                                             <constraint firstItem="7iB-mU-YB7" firstAttribute="leading" secondItem="pYG-vu-xzU" secondAttribute="leading" constant="10" id="Zvq-2i-HOY"/>
-                                            <constraint firstItem="7iB-mU-YB7" firstAttribute="top" secondItem="pYG-vu-xzU" secondAttribute="top" constant="10" id="edM-Rc-l9u"/>
+                                            <constraint firstItem="7iB-mU-YB7" firstAttribute="top" secondItem="pYG-vu-xzU" secondAttribute="top" constant="16" id="edM-Rc-l9u"/>
                                             <constraint firstItem="Jmd-6u-Dec" firstAttribute="leading" secondItem="UF9-RG-23w" secondAttribute="trailing" constant="-1" id="iA7-ez-Bil"/>
                                             <constraint firstItem="TTD-p4-2vB" firstAttribute="leading" secondItem="pYG-vu-xzU" secondAttribute="leading" id="kAz-wy-OwS"/>
                                             <constraint firstItem="YlO-7e-lXW" firstAttribute="leading" secondItem="UF9-RG-23w" secondAttribute="trailing" constant="-1" id="pi4-Wv-NJ5"/>
