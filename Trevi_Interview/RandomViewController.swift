@@ -21,7 +21,7 @@ class RandomViewController: UIViewController {
         self.randomCollectionView.delegate = self
         self.randomCollectionView.dataSource = self
         self.randomGridRow()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in
             self.randomGridRow()
         }
         // Do any additional setup after loading the view.
@@ -77,35 +77,40 @@ extension RandomViewController:UICollectionViewDelegate,UICollectionViewDataSour
     private func createCellData(indexPath:IndexPath) -> RandomCellData{
         let isHideRandomLabel = indexPath.row != randomRow
         var backGroundMode:BackGroundColorMode!
-        let isLastLineCell = gridCount.columCount * gridCount.rowCount - indexPath.row <= gridCount.columCount
-        if isLastLineCell {
-            backGroundMode = BackGroundColorMode.black
-        }else{
-            let modeInt = ( indexPath.row / gridCount.columCount ) % 3
-            if modeInt == 0 { backGroundMode = BackGroundColorMode.red }
-            if modeInt == 1 { backGroundMode = BackGroundColorMode.greed }
-            if modeInt == 2 { backGroundMode = BackGroundColorMode.orange }
+        let isLastRowCell = gridCount.columCount * gridCount.rowCount - indexPath.row <= gridCount.columCount
+        let isFirstRowCell = indexPath.row + 1 <= gridCount.columCount
+        let isSameColumWithRandomCell = indexPath.row % gridCount.columCount == randomRow % gridCount.columCount
+        let modeInt = ( indexPath.row / gridCount.columCount ) % 3
+        if modeInt == 0 { backGroundMode = BackGroundColorMode.red }
+        if modeInt == 1 { backGroundMode = BackGroundColorMode.greed }
+        if modeInt == 2 { backGroundMode = BackGroundColorMode.orange }
+        if isLastRowCell { backGroundMode = BackGroundColorMode.black }
+        //初始狀態為隱藏baseLine
+        var baselineShowMode:BaseLineShowMode = BaseLineShowMode.hidden
+        //檢查是否此index是跟Random在同一colum上
+        guard isSameColumWithRandomCell else{
+            return RandomCellData(isHideRandomLabel: isHideRandomLabel, baseLineShowMode: baselineShowMode, backGroundMode: backGroundMode)
         }
-        var baselineShowMode:BaseLineShowMode!
-        
-        if indexPath.row % gridCount.columCount != randomRow % gridCount.columCount{
-            baselineShowMode = BaseLineShowMode.hidden
-        }
-        else if indexPath.row + 1 <= gridCount.columCount {
-            baselineShowMode = BaseLineShowMode.top
-        }
-        else if isLastLineCell {
+        //開始設為中間行
+        baselineShowMode = BaseLineShowMode.middle
+        //再檢查是否為第一行
+        if isFirstRowCell { baselineShowMode = BaseLineShowMode.top }
+        //再檢查是否為最後一行
+        if isLastRowCell {
             baselineShowMode = BaseLineShowMode.bottom
             backGroundMode = BackGroundColorMode.highlightBlue
-        }
-        else{
-            baselineShowMode = BaseLineShowMode.middle
         }
         return RandomCellData(isHideRandomLabel: isHideRandomLabel, baseLineShowMode: baselineShowMode, backGroundMode: backGroundMode)
     }
     
     private func randomGridRow(){
-        randomRow = Int(arc4random_uniform(UInt32(gridCount.columCount * (gridCount.rowCount-1))))
+        let lastRandomRow = randomRow
+        let newRandomRow = Int(arc4random_uniform(UInt32(gridCount.columCount * (gridCount.rowCount-1))))
+        guard lastRandomRow != newRandomRow else{
+            randomGridRow()
+            return
+        }
+        randomRow = newRandomRow
     }
     
 }

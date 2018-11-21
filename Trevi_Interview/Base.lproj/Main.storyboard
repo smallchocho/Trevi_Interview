@@ -269,7 +269,7 @@
                                                             <real key="value" value="0.5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.25879135730000002" green="0.25884211060000001" blue="0.25878816840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.36429299045892882" green="0.36789985175060136" blue="0.36789985175060136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
